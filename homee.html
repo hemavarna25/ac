@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - AlumConnect</title>
+    <link rel="icon" href="Alumconnect (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            background: rgba(255, 189, 75, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 189, 75, 0.2);
+        }
+
+        header .logo img {
+            width: 120px;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            position: relative;
+        }
+
+        header nav ul li a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background: white;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            transition: width 0.3s;
+        }
+
+        header nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 120px);
+            background: rgba(255, 189, 75, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            color: #ffbd4b;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .hero-content .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ffbd4b;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .hero-content .btn:hover {
+            background-color: #f89f05;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffbd4b;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-content p {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header role="banner">
+        <div class="container">
+            <div class="logo" aria-label="AlumConnect Logo">
+                <!-- <img src="AlumConnect.(1).png" alt="AlumConnect Logo"> -->
+            </div>
+            <nav role="navigation">
+                <ul class="nav-links">
+                    <li><a href="aboutus.html" aria-label="About Us">About Us</a></li>
+                    <li><a href="contactus.html" aria-label="Contact Us">Contact Us</a></li>
+                    <li><a href="login.html" aria-label="Login">Login</a></li>
+                    <li><a href="signup.html" aria-label="Signup">Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="hero" role="main">
+        <div class="hero-content">
+            <h1>Welcome to AlumConnect</h1>
+            <p>Connecting Alumni and Students</p>
+            <a href="https://docs.google.com/document/d/1avKzwTdzSw4CGIO948ZaiT8q0gjggVkn/edit?usp=sharing&ouid=107633412793200350000&rtpof=true&sd=true" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; AlumConnect All rights Received 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add any JavaScript here for dynamic behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            // Example: Smooth scroll for anchor links
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
